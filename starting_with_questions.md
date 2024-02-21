@@ -19,10 +19,20 @@ Answer: Atlanta USA, Sunnyvale USA, Televiv Israel, Los Angeles USA, Seatte USA
 
 
 SQL Queries:
-SELECT all_sessions.country, all_sessions.city, all_sessions."visitId", sales_by_sku.total_ordered
-    FROM sales_by_sku
-    JOIN all_sessions ON sales_by_sku."productSKU" = all_sessions."productSKU"
-    ORDER BY sales_by_sku.total_ordered DESC;
+SELECT 
+    all_sessions.country, 
+    all_sessions.city,  
+    AVG(sales_by_sku.total_ordered) AS avg_products_ordered
+FROM 
+    sales_by_sku
+JOIN 
+    all_sessions ON sales_by_sku."productSKU" = all_sessions."productSKU"
+GROUP BY 
+    all_sessions.country, 
+    all_sessions.city 
+ORDER BY 
+    avg_products_ordered DESC;
+
 
 Larry AI was a great assistance in realizing column titles with quotation marks surrounding it. Without it, PGadmin4 was not picking up the feed. 
 
@@ -35,11 +45,13 @@ Answer: United States (Country), City (N/A) Product ordered: 456/visitorId
 
 
 SQL Queries:
-SELECT all_sessions."visitId", all_sessions."v2ProductName", all_sessions.city, all_sessions.country, sales_by_sku.total_ordered
+SELECT all_sessions."v2ProductCategory", all_sessions.city, all_sessions.country, SUM(sales_by_sku."total_ordered") AS total
     FROM all_sessions
-    JOIN sales_by_sku ON all_sessions."productSKU" = sales_by_sku."productSKU"
-    ORDER BY city DESC; 
-    ORDER BY "v2ProductName"; -- varying column name to analyze response of visitors per factor. 
+	JOIN sales_by_sku ON all_sessions."productSKU" = sales_by_sku."productSKU"
+	WHERE total_ordered >= 1
+	GROUP BY 1,2,3
+	ORDER BY total DESC
+
 
 Answer: Hi Quantity of ballpoint LED light pens purchased inn United States, Germany, South Korea, Japan, India. Visitors seem to be purchasing high quantity of products. While Google products seem not too appealing to vistors across various countries and cities. Based on Product, Youtube short sleeves are not popular irrespective of location. 
 
@@ -49,13 +61,14 @@ Answer: Hi Quantity of ballpoint LED light pens purchased inn United States, Ger
 
 
 SQL Queries:
-SELECT all_sessions."visitId", all_sessions."v2ProductName", all_sessions.city, all_sessions.country, sales_by_sku.total_ordered
-FROM all_sessions
-JOIN sales_by_sku ON all_sessions."productSKU" = sales_by_sku."productSKU"
-ORDER BY "total_ordered" DESC;
+SELECT all_sessions."v2ProductName", all_sessions.city, all_sessions.country, SUM(sales_by_sku."total_ordered") AS total
+	FROM all_sessions
+	JOIN sales_by_sku ON all_sessions."productSKU" = sales_by_sku."productSKU"
+	WHERE city != 'not available in demo dataset'
+	GROUP BY city, country, "v2ProductName"
+	ORDER BY total DESC;
 
-Answer: Ballpoint LED Light Pen
-
+Answer: 
 
 
 
