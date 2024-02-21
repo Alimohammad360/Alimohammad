@@ -18,6 +18,9 @@ Question 3: How many year-to-year increase in sessions are there?
 
 SQL Queries:
 
+SELECT Count("visitId"), YEAR("date") AS date FROM all_sessions
+	GROUP BY date
+
 Answer:
 
 
