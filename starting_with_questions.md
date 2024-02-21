@@ -76,7 +76,10 @@ Answer:
 **Question 5: Can we summarize the impact of revenue generated from each city/country?**
 
 SQL Queries:
-
+SELECT all_sessions.city, all_sessions.country, SUM(revenue/1000000) AS revenues FROM analytics 
+	JOIN all_sessions ON analytics."visitId" = all_sessions."visitId"
+	WHERE analytics.revenue is not NULL
+	GROUP BY city, country
 
 
 Answer:
