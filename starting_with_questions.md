@@ -6,14 +6,13 @@ Answer the following questions and provide the SQL queries used to find the answ
 
 SQL Queries:
 SELECT city, country, SUM("totalTransactionRevenue") AS total
-    FROM all_sessions
+    	FROM all_sessions
 	WHERE "totalTransactionRevenue" IS NOT NULL
 	GROUP BY city, country
     ORDER BY total DESC;
 
 
-Answer: Atlanta USA, Sunnyvale USA, Televiv Israel, Los Angeles USA, Seatte USA
-
+Answer: USA: San Francisco, Sunnyvale. Israel Tel Avev
 
 **Question 2: What is the average number of products ordered from visitors in each city and country?**
 
@@ -36,7 +35,7 @@ ORDER BY
 
 Larry AI was a great assistance in realizing column titles with quotation marks surrounding it. Without it, PGadmin4 was not picking up the feed. 
 
-Answer: United States (Country), City (N/A) Product ordered: 456/visitorId
+Answer: United States (Country), Rexburg, (City) Product ordered: 250.5/ VistorId
         South Korea, Seoul, 456/VisitorId
         Malaysia, N/A 456
         Spain, N/A 456
@@ -68,7 +67,7 @@ SELECT all_sessions."v2ProductName", all_sessions.city, all_sessions.country, SU
 	GROUP BY city, country, "v2ProductName"
 	ORDER BY total DESC;
 
-Answer: 
+Answer: Per city and Country, the Nest indoor Camera was in summation the top selling product. Satiationary items were also very popular such as pens and journals. The pattern that was established seem to demonstrate personal items that ehanced lifestyles. 
 
 
 
@@ -82,7 +81,7 @@ SELECT all_sessions.city, all_sessions.country, SUM(revenue/1000000) AS revenues
 	GROUP BY city, country
 
 
-Answer:
+Answer: We can absolutely summarize the impact of Reveniue generated from each city and country. The results of the query demonstrated that Chicago had the greatest revenue impact while Mountain View was second. United States does take the first place in revenue impact across the board while Israel was second.
 
 
 
