@@ -9,4 +9,17 @@ Also removing the Not available/demo data that is in the city column.
 Queries:
 SELECT productPrice/1000000 FROM all_sessions
 
+ALTER TABLE all_session
+RENAME COLUMN "total_ordered" TO total_ordered;
+This was done for another 20 columns
+
+DELETE FROM all_session
+WHERE total_ordered IS NULL
+   OR fullvisitorId IS NULL
+   OR pageviews IS NULL
+   OR sessionQualityDim IS NULL;
+
+This was done for other column sets
+
+
 Below, provide the SQL queries you used to clean your data.
