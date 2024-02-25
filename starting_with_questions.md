@@ -1,5 +1,6 @@
 Answer the following questions and provide the SQL queries used to find the answer.
 
+To whom it may concern, I cannot present the code properly below if it is not in the code format of github
     
 **Question 1: Which cities and countries have the highest level of transaction revenues on the site?**
 
