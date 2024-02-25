@@ -6,9 +6,9 @@ Answer the following questions and provide the SQL queries used to find the answ
 
 SQL Queries:
 SELECT city, country, SUM("totalTransactionRevenue") AS total
-    	FROM all_sessions
-	WHERE "totalTransactionRevenue" IS NOT NULL
-	GROUP BY city, country
+    FROM all_sessions
+    WHERE "totalTransactionRevenue" IS NOT NULL
+    GROUP BY city, country
     ORDER BY total DESC;
 
 
