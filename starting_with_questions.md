@@ -6,19 +6,21 @@ To whom it may concern, I cannot present the code properly below if it is not in
 
 
 SQL Queries:
+/*
 SELECT city, country, SUM("totalTransactionRevenue") AS total
     FROM all_sessions
     WHERE "totalTransactionRevenue" IS NOT NULL
     GROUP BY city, country
     ORDER BY total DESC;
+/**/
 
-
-Answer: USA: San Francisco, Sunnyvale. Israel Tel Avev
+-- Answer: USA: San Francisco, Sunnyvale. Israel Tel Avev
 
 **Question 2: What is the average number of products ordered from visitors in each city and country?**
 
 
-SQL Queries:
+--SQL Queries:
+/*
 SELECT 
     all_sessions.country, 
     all_sessions.city,  
@@ -32,6 +34,7 @@ GROUP BY
     all_sessions.city 
 ORDER BY 
     avg_products_ordered DESC;
+/**/
 
 
 Larry AI was a great assistance in realizing column titles with quotation marks surrounding it. Without it, PGadmin4 was not picking up the feed. 
