@@ -4,9 +4,9 @@
 To import and analyze the data to not only answer the questions that were asserted but to also understand consumer behavior across the Globe. 
 
 ## Process
-### Primarily it was to import the data set. After going through CSV files, naming each columns were incredibly important. Especially when importing them, certain column names had quotation marks around it and so I had to clean the data to make it more efficient by re-naming the columns. 
-Also removing the Null data, column sets where it had only one value, add new columns especially after JOINING to add average column sets. 
-Secondary steps post cleaning the data sets were Joining the tables together, doing summations of Data sets to find which city/ country had the most impact. I suppose almost every question ensured Joining two table sets with exception of the first question.
+1. Primarily it was to import the data set. After going through CSV files, naming each columns were incredibly important. Especially when importing them, certain column names had quotation marks around it and so I had to clean the data to make it more efficient by re-naming the columns. 
+2. Also removing the Null data, column sets where it had only one value, add new columns especially after JOINING to add average column sets. 
+3. Secondary steps post cleaning the data sets were Joining the tables together, doing summations of Data sets to find which city/ country had the most impact. I suppose almost every question ensured Joining two table sets with exception of the first question.
 
 ## Results
 The results were determined through a lot of Joining data sets together and filtering out columns that were unnecessary and required. Through this I was able to ascertain multiple point of views that can tackle the objectives. A lot of tables had similarities and thus provided different ways to understand consumerism. Psychology of visitors in each country were ascertained for instance, Google Nest was the greatest product purchased in USA while stationary items were bigger in European countries. 
