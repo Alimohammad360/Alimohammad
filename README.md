@@ -12,7 +12,9 @@ To import and analyze the data to not only answer the questions that were assert
 The results were determined through a lot of Joining data sets together and filtering out columns that were unnecessary and required. Through this I was able to ascertain multiple point of views that can tackle the objectives. A lot of tables had similarities and thus provided different ways to understand consumerism. Psychology of visitors in each country were ascertained for instance, Google Nest was the greatest product purchased in USA while stationary items were bigger in European countries. 
 
 ## Challenges 
-Some challenges that I faced were the naming of the columns as SQL is very precise. Secondly, understanding the definitions of each column. I felt as if we had a subjective assertion into the table set. Going forward I believe asking tons of questions will provide a viable solution. To ask supervisors and managers to be able to better provide context to ensure theres no true subjectivity in the results. 
+1. Some challenges that I faced were the naming of the columns as SQL is very precise.
+2. Understanding the definitions of each column. I felt as if we had a subjective assertion into the table set.
+3. To readily understand how the data itself establishes a greater picture
 
 ## Future Goals
 Some future Goals are to gain more proficiency with the tool set. I believe the PGADMIN 4 is a phenomenal tool to really help sort and filter the data sets. Secondly, to push deeper and provide a greater contextualization of the data sets to better provide understanding. 
