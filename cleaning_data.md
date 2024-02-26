@@ -28,10 +28,13 @@ WHERE "valueId" IN (
     SELECT "valueId"
     FROM all_sessions
     GROUP BY "valueId"
-    HAVING COUNT(*) > 1
+    HAVING COUNT(*) > 1);
 /**/
-#To remove the dublicates, this was done in roughly 10 different columns varying the different tables.
-);
+
+
+To remove the dublicates, this was done in roughly 10 different columns varying the different tables.
+
+
 
 
 
